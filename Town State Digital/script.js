@@ -85,14 +85,6 @@ shopifyAmount.forEach(sh => {
 };
 
 
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
-
-
 // Data aos
   AOS.init({
     duration: 1000,
