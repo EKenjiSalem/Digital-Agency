@@ -84,7 +84,6 @@ shopifyAmount.forEach(sh => {
  });
 };
 
-
 // Data aos
   AOS.init({
     duration: 1000,

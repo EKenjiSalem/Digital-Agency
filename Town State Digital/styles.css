@@ -52,24 +52,6 @@ input[class="appointment-btn"] {
     margin-bottom: 1.5rem;
 }
 
-.header .logo img{
- 
-}
-
-/* .header .logo span-1 {
-    color: teal;
-    margin-left: 2rem;
-    margin-bottom: 12%;
-}
-
-.header .logo span-2 {
-    color: teal;
-}
-
-.header .logo span-3 {
-    color: teal
-} */
-
 .header nav {
     margin-left: 1%;
     margin-bottom: 5rem;
@@ -116,30 +98,33 @@ input[class="appointment-btn"] {
     display: none;
 }
 
-.header-1 {
-    padding: 2rem;
-    border-bottom: var(--border);
-}
 
 .header.active {
    background-color: black;
    box-shadow: var(--box-shadow);
    border: 0rem;
    bottom: 67rem;
-
 }
+
+/* Contact Form Header */
+
 
 .header-1 .logo {
     font-size: 2rem;
+    margin-left: 7rem;
+}
+
+.header-1 {
+    padding: 2rem;
+    border-bottom: var(--border);
 }
 
 .header-1 nav {
-    margin-left: 1%;
-    margin-bottom: 5rem;
+    padding-right: 31rem;
 }
 
 .header-1 .nav a {
-    margin: 0 1rem;
+    margin: 1rem;
     font-size: 2rem;
     color: teal;
 }
@@ -159,7 +144,7 @@ input[class="appointment-btn"] {
     /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
     background: transparent;
     border: 2px solid teal;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     margin-right: -4rem;
 }
 
@@ -170,6 +155,64 @@ input[class="appointment-btn"] {
     text-decoration: none;
     transition: 1s;
     background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        font-size: 2.5rem;
+        color: var(--black);
+        cursor: pointer;
+        display: none;
+        margin-bottom: 3.5rem;
+    }
+
+
+    .header.active {
+        background-color: black;
+        box-shadow: var(--box-shadow);
+        border: 0rem;
+        bottom: 64rem;
+     }
+
+
+
+     .header .row .logo img {
+        margin-top: -1rem;
+    
+    }
+
+  
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+ 
+
+    .header-1 .nav {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        padding: 1rem 0;
+        text-align: center;
+        flex-flow: column;
+        /* clip-path enables the menu to hide */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+        color: teal;    
+    }
+
+    .header-1 .nav.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header-1 .nav a {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
 }
 
 
@@ -191,7 +234,7 @@ input[class="appointment-btn"] {
 .home .home-info h3 {
     font-size: 6rem;
     color: teal;
-    margin-top: -27rem;
+    margin-top: -29rem;
     text-align: center;
 }
     
@@ -226,9 +269,42 @@ input[class="appointment-btn"] {
     text-decoration: none;
 }
 
-#projects {
-	background: url(images/black.jpg);
+
+@media (max-width:768px) {
+
+    .home .home-info h3 {
+        font-size: 5rem;
+        color: teal;
+        text-align: center;
+        margin-top: -21rem;
+    }
+
+    .home .home-info p {
+        font-size: 16px;
+        color: teal;
+        text-align: center;
+    }
+
+    .home .home-info .btn-1 {
+        margin-bottom: 3.5rem;
+        margin-left: 30%;
+        display: inline-block;
+        background-image: linear-gradient(#20b2aa, #008080);
+        /* background: radial-gradient(circle at 10% 20%, rgb(89, 195, 195) 0%, rgb(14, 175, 181) 90%); */
+        /* background: #0E5A5A; */
+        color: black;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 1.5rem 4.5rem;
+        border-radius: 2rem;
+    }
+
 }
+
+
+
+
+/* Services */
 
 .heading {
     text-align: center;
@@ -236,10 +312,6 @@ input[class="appointment-btn"] {
     color: black;
     font-size: 4rem;
 }
-
-
-
-/* Services */
 
 .services {
     background: black;
@@ -261,6 +333,17 @@ input[class="appointment-btn"] {
 .services .box-container .box {
     border-radius: .5rem;
     background: #333;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.services .box-container .box:hover {
+    border-radius: .5rem;
+    /* background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     text-align: center;
     padding: 2.5rem;
 }
@@ -365,6 +448,10 @@ input[class="appointment-btn"] {
 
 /* Projects */
 
+#projects {
+	background: url(images/black.jpg);
+}
+
 .projects-heading {
     text-align: center;
     padding-bottom: 5rem;
@@ -382,7 +469,7 @@ input[class="appointment-btn"] {
 } 
 
 #projects .project-info .project-title {
-    padding-top: 2rem;
+    padding-top: 3rem;
     text-align: center;
     text-decoration: underline;
     padding-bottom: 1.5rem;
@@ -424,6 +511,7 @@ input[class="appointment-btn"] {
     background: radial-gradient(circle at 0.1% 99.8%, rgb(0, 164, 189) 0%, rgb(0, 189, 165) 90%);
     min-height: 100vh;
     text-align: center;
+    margin-top: -4rem;
 }
 
 .price-heading {
@@ -435,7 +523,6 @@ input[class="appointment-btn"] {
     padding-top: 2rem;
 
 }
-
 
 .pricing-container .price-container {
     max-width: 1200px;
@@ -558,21 +645,6 @@ input[class="appointment-btn"] {
     background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
     margin-top: -5rem;
 }
-
-#contact-form-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    padding-top: 15rem;
-    width: 100%;
-    color: teal;
-    /* background: rgba(37, 41, 88);  */
-    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-   
-}
-
 
 /* #contact-form::before {
     content: '';
@@ -735,6 +807,173 @@ input[class="appointment-btn"] {
 } 
 
 
+
+/* Contact Form */
+
+#contact-form-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    padding: 20px;
+    padding-top: 15rem;
+    width: 100%;
+    color: teal;
+    /* background: rgba(37, 41, 88);  */
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+   
+}
+
+.contact-container-1 {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    margin-top: -2rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid teal;
+    /* border-right: 1px solid rgba(255,255,255,0.25);
+    border-bottom: 1px solid rgba(255,255,255,0.25); */
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+ }
+
+.contact-container-1 h1 {
+    width: 100%;
+    text-align: center;
+    color: teal;
+    font-size: 3rem;
+    margin-bottom: 6rem;
+ }
+ 
+ .contact-container-1 .contact-row {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ }
+ 
+ .contact-container-1 .contact-row .col {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: teal;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox input,
+ .contact-container-1 .contact-row .col .inputBox textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    color: black;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox input:focus + .text,
+ .contact-container-1 .contact-row .col .inputBox input:valid + .text,
+ .contact-container-1 .contact-row .col .inputBox textarea:focus + .text,
+ .contact-container-1 .contact-row .col .inputBox textarea:valid + .text {
+    top: -35px;
+    left: -10px;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: teal;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox input:focus ~ .line,
+ .contact-container-1 .contact-row .col .inputBox textarea:valid ~ .line {
+    height: 100%;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox textarea:focus ~ .line,
+ .contact-container-1 .contact-row .col .inputBox textarea:valid ~ .line {
+    height: 100%;
+ }
+ 
+ .contact-container-1 .contact-row .col .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+ }
+ 
+ .contact-container-1 .contact-row .col input[type="submit"] {
+    border: none;
+    padding: 2rem 5rem;
+    cursor: pointer;
+    outline: none;
+    background: teal;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 1rem;
+ }
+ 
+ .contact-container-1 .contact-row .col input[type="submit"]:hover {
+     background: black;
+     color: aqua;
+     transition: 2s;
+ } 
+
+
+ @media (max-width: 768px) {
+    .contact-container-1 {
+        position: relative;
+        z-index: 1000;
+        width: 100%;
+        max-width: 1000px;
+        padding: 50px;
+        margin-top: 25rem;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid teal;
+        /* border-right: 1px solid rgba(255,255,255,0.25);
+        border-bottom: 1px solid rgba(255,255,255,0.25); */
+        border-radius: 10px;
+        overflow: hidden;
+        backdrop-filter: blur(25px);
+     }
+       
+    }
+ }
+
 /* Footer */
 
 .footer {  
@@ -884,7 +1123,6 @@ input[class="appointment-btn"] {
     }
 
 
-
     .header-1 .nav {
         position: absolute;
         top: 99%;
@@ -909,12 +1147,6 @@ input[class="appointment-btn"] {
         font-size: 2rem;
     }
 
-    .home .home-info h3 {
-        font-size: 6rem;
-        color: teal;
-        text-align: center;
-        margin-top: -27rem;
-    }
         
     .footer .footer-logo {
         margin-top: 30px;
