@@ -6,6 +6,7 @@ const header = document.querySelector('.header');
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
+    header.classList.add('active');
 }
 
 // Scroll Bar 

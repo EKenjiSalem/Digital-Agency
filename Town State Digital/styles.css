@@ -104,6 +104,7 @@ input[class="appointment-btn"] {
    box-shadow: var(--box-shadow);
    border: 0rem;
    bottom: 67rem;
+
 }
 
 /* Contact Form Header */
@@ -176,14 +177,12 @@ input[class="appointment-btn"] {
      }
 
 
-
      .header .row .logo img {
         margin-top: -1rem;
     
     }
 
   
-
     #menu-btn.fa-times {
         transform: rotate(180deg);
     }
@@ -199,13 +198,13 @@ input[class="appointment-btn"] {
         text-align: center;
         flex-flow: column;
         /* clip-path enables the menu to hide */
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
         transition: .2s linear;
         color: teal;    
     }
 
     .header-1 .nav.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
     }
 
     .header-1 .nav a {
@@ -321,7 +320,7 @@ input[class="appointment-btn"] {
 
 .services .heading span {
     color: teal;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .services .box-container {
@@ -458,7 +457,7 @@ background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
     padding-top: 2rem;
     color: teal;
     font-size: 4rem;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 #projects .project-info {
@@ -511,7 +510,9 @@ background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
     background: radial-gradient(circle at 0.1% 99.8%, rgb(0, 164, 189) 0%, rgb(0, 189, 165) 90%);
     min-height: 100vh;
     text-align: center;
-    margin-top: -4rem;
+    margin-top: -7rem;
+
+    
 }
 
 .price-heading {
@@ -519,13 +520,14 @@ background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
     padding-bottom: 2rem;
     color: black;
     font-size: 4rem;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     padding-top: 2rem;
 
 }
 
 .pricing-container .price-container {
     max-width: 1200px;
+
     margin: 0 auto;
     padding: 20px;
     display: grid;
@@ -979,16 +981,17 @@ background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
 .footer {  
     background-color: teal;  
     padding: 50px 0 30px;  
-    color: black;
+    color: teal;
   }  
 
   .footer-heading {  
+    color: grey;
     letter-spacing: 2px;  
     font-size: 1.5rem;
   } 
 
   .footer-link a {  
-    color: black;  
+    color: teal;  
     line-height: 40px;  
     font-size: 14px;  
     transition: all 0.5s;  
@@ -999,7 +1002,7 @@ background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Fir
   }  
 
   .contact-info {  
-    color: black;  
+    color: teal;  
     font-size: 14px;  
   }  
 
