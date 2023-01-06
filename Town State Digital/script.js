@@ -2,12 +2,14 @@ const menu = document.querySelector('#menu-btn');
 const navbar = document.querySelector('.header .nav');
 const header = document.querySelector('.header');
 
+
 // Responsive Menu
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
     header.classList.add('active');
 }
+
 
 // Scroll Bar 
 window.onscroll = () => {
@@ -27,7 +29,7 @@ let customAmount = document.querySelectorAll('.price-container .price-box .custo
 let shopifyAmount = document.querySelectorAll('.price-container .price-box .shopify');
 let wordAmount = document.querySelectorAll('.price-container .price-box .wordpress');
 
-// custom section
+// Custom Section
 custom.onclick = () => {
     custom.classList.add('active');
     shopify.classList.remove('active');
@@ -43,10 +45,12 @@ shopifyAmount.forEach(sh => {
 
 wordAmount.forEach(wo => {
     wo.style.display = 'none';
-});
+
+ });
 };
 
-// shopify section
+
+// Shopify Section
 shopify.onclick = () => {
     shopify.classList.add('active');
     custom.classList.remove('active');
@@ -65,7 +69,7 @@ wordAmount.forEach(wo => {
  });
 };
 
-// wordpress option
+// Wordpress Section
 wordpress.onclick = () => {
     wordpress.classList.add('active');
     shopify.classList.remove('active');
@@ -85,8 +89,16 @@ shopifyAmount.forEach(sh => {
  });
 };
 
-// Data aos
+// Data AOS
   AOS.init({
     duration: 1000,
     delay: 200
   })
+
+
+//   Clears form info after submitting
+  window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
+  }
